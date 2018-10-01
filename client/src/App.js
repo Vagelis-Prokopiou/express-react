@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FormReverseString from './components/form_reverse_string';
+import FormBackendRequest from "./components/form_backend_request";
 
 class App extends Component {
     render() {
@@ -14,6 +15,7 @@ class App extends Component {
                 <div className="container">
                     <br/>
                     <FormReverseString/>
+                    <FormBackendRequest/>
                 </div>
             </div>
         );

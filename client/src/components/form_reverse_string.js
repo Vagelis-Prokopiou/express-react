@@ -7,12 +7,11 @@ class FormReverseString extends Component {
     };
 
     submitHandler = (e) => {
-        const self = this;
         e.preventDefault();
+        const self = this;
         const stringToReverse = e.target[0].value;
 
         if (stringToReverse === '' && this.state.stringToReverse !== '') {
-            console.log('I run')
             self.setState({stringToReverse: stringToReverse, reversedString: stringToReverse});
             return;
         }
@@ -39,11 +38,13 @@ class FormReverseString extends Component {
     render() {
         return (
             <div>
+                <h2>Form 1: Reverse string</h2>
                 <form onSubmit={this.submitHandler}>
-                    <input id="reverse-text" name="reverse-text" type="text"/>
+                    String: <input name="reverse-text" type="text"/>
+                    <br/>
                     <input type="submit" name="submit"/>
                 </form>
-                <p>Reversed string: {this.state.reversedString}</p>
+                <p>Result: {this.state.reversedString}</p>
             </div>
         );
     }

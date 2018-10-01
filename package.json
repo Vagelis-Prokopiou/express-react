@@ -11,10 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "request": "^2.88.0",
-    "simultaneously": "^2.2.0"
+    "request": "^2.88.0"
   },
   "devDependencies": {
+    "concurrently": "^4.0.1",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4"
   }

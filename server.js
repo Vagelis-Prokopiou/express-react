@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 5000;
-const reverseString = require('./helpers').reverseString;
+const reverseString = require('./helpers/helpers').reverseString;
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 app.get('/', (req, res) => res.send('The server is running.'));

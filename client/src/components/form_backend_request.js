@@ -39,16 +39,18 @@ class FormBackendRequest extends Component {
                 <p>Alternate url 1: http://jsonplaceholder.typicode.com/todos</p>
                 <p>Alternate url 2: http://jsonplaceholder.typicode.com/posts</p>
                 <form onSubmit={this.submitHandler}>
-                    URL: <input size="40" name="url" type="url"
-                                defaultValue="http://jsonplaceholder.typicode.com/users"/>
-                    <br/>
-                    Method:
-                    <select name="method">
-                        <option value="get">GET</option>
-                        <option value="post">POST</option>
-                    </select>
-                    <br/>
-                    <input type="submit" name="submit"/>
+                    <div className="form-group">
+                        URL: <input name="url" type="url"
+                                    defaultValue="http://jsonplaceholder.typicode.com/users" className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        Method:
+                        <select name="method" className="form-control">
+                            <option value="get">GET</option>
+                            <option value="post">POST</option>
+                        </select>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
                 <p>Result: {this.state.stringResult}</p>
             </div>

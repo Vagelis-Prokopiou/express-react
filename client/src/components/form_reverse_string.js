@@ -40,9 +40,10 @@ class FormReverseString extends Component {
             <div>
                 <h2>Form 1: Reverse string</h2>
                 <form onSubmit={this.submitHandler}>
-                    String: <input name="reverse-text" type="text"/>
-                    <br/>
-                    <input type="submit" name="submit"/>
+                    <div className="form-group">
+                        String: <input name="reverse-text" type="text" className="form-control"/>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
                 <p>Result: {this.state.reversedString}</p>
             </div>

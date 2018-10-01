@@ -9,3 +9,9 @@
 4. Run `npm start` to start the local dev servers.
 
 5. Navigate to `http://localhost:3000/`.
+
+# How to run the tests:
+
+1. `cd` into the root directory and `npm install` (if haven't already).
+
+2. Run `npm test`.

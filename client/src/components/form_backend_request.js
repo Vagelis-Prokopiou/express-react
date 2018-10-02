@@ -14,8 +14,6 @@ class FormBackendRequest extends Component {
         const method = e.target[1].value;
 
         if ((url && url !== this.state.url) || method !== this.state.method) {
-            self.setState({url, method});
-
             fetch('/api/data?url=' + url + '&method=' + method)
                 .then(function (response) {
                     if (!response.ok) {
@@ -24,7 +22,7 @@ class FormBackendRequest extends Component {
                     return response.json();
                 })
                 .then(function (json) {
-                    self.setState({stringResult: JSON.stringify(json.data)});
+                    self.setState({url, method, stringResult: JSON.stringify(json.data)});
                 })
                 .catch(function (err) {
                     console.log(err);

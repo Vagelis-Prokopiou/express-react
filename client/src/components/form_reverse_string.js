@@ -17,8 +17,6 @@ class FormReverseString extends Component {
         }
 
         if (stringToReverse !== this.state.stringToReverse) {
-            self.setState({stringToReverse: stringToReverse});
-
             fetch('/api/reverse-string?string=' + stringToReverse)
                 .then(function (response) {
                     if (!response.ok) {
@@ -27,7 +25,7 @@ class FormReverseString extends Component {
                     return response.json();
                 })
                 .then(function (json) {
-                    self.setState({reversedString: json.data});
+                    self.setState({stringToReverse: stringToReverse, reversedString: json.data});
                 })
                 .catch(function (err) {
                     console.log(err);
